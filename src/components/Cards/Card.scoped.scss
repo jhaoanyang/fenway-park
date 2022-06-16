@@ -1,0 +1,32 @@
+button {
+  background-color: #a3423c;
+  color: #f0d290;
+  flex: 0 1 16vw;
+  margin: 2vh 2vw;
+  font-size: 1.5rem;
+  border: 0.2rem dashed #e7ab79;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-0 {
+  background-color: white;
+  opacity: 1;
+}
+
+.color-1 {
+  background-color: #a3423c;
+  opacity: 1;
+}
+
+.color-2 {
+  background-color: #753d4d;
+  opacity: 1;
+}
+
+.color-3 {
+  background-color: #6e4c78;
+  opacity: 1;
+}

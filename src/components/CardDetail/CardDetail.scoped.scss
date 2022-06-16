@@ -1,0 +1,55 @@
+.card-detail {
+  background-color: #781d42;
+  display: none;
+  position: fixed;
+  top: 5vh;
+  bottom: 5vh;
+  right: 5vw;
+  left: 5vw;
+  border-radius: 1rem;
+  &.active {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  button {
+    background-color: black;
+    color: #f0d290;
+    opacity: 0.3;
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+    border-radius: 50%;
+    line-height: 1em;
+  }
+
+  menubar,
+  div {
+    position: relative;
+    color: #f0d290;
+    font-size: 4rem;
+    text-align: center;
+    border: 0.2rem dashed #e7ab79;
+    padding: 3rem;
+    border-radius: 50%;
+    line-height: 1em;
+  }
+
+  div {
+    border: none;
+    font-size: 2rem;
+    line-height: 0.8em;
+  }
+
+  textarea {
+    background: none;
+    height: 60vh;
+    width: 30vh;
+    border: 0.2rem dashed #e7ab79;
+    font-size: 2rem;
+    color: lightgray;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
