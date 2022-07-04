@@ -1,3 +1,10 @@
+$background-colors: (
+  1: "#ff2422",
+  2: "#3db2ff",
+  3: "#ffb830",
+  4: "#377D71",
+);
+
 main {
   background-color: black;
   position: fixed;
@@ -6,4 +13,109 @@ main {
   right: 0;
   left: 0;
   color: white;
+  overflow-x: scroll;
+  display: flex;
+  scroll-snap-type: x proximity;
+
+  section {
+    @each $idx, $color in $background-colors {
+      &:nth-child(5n + #{$idx}) {
+        background-color: #{$color};
+      }
+    }
+    min-height: 100vh;
+    min-width: 80vw;
+    box-sizing: border-box;
+    padding: 10vh 10vw;
+    position: relative;
+    border-right: 0.3vw dashed white;
+  }
+
+  h1 {
+    position: absolute;
+    right: 10vw;
+    font-size: 15vw;
+  }
+
+  h2 {
+    font-size: 10vw;
+    line-height: 1em;
+    margin: 0 0 8vh 0;
+  }
+
+  h3 {
+    font-size: 6vw;
+    line-height: 1em;
+  }
+
+  div {
+    font-size: 3vw;
+    line-height: 2em;
+  }
+
+  .quote {
+    font-size: 3vw;
+    &:before {
+      content: "“";
+      font-size: 8vw;
+    }
+    &:after {
+      content: "”";
+      font-size: 8vw;
+      position: relative;
+      top: 3vh;
+      right: -3vw;
+    }
+  }
+}
+
+.front-page {
+  min-width: 100vw;
+  h2 {
+    position: absolute;
+    font-size: 8vw;
+    bottom: 5vh;
+  }
+  h3 {
+    position: absolute;
+    font-size: 3vw;
+    bottom: 5vh;
+    right: 10vw;
+  }
+}
+
+.img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 10vh;
+  right: 2.5vw;
+  width: 50vw;
+  height: 80vh;
+  &.index {
+    background-image: url(./index.png);
+  }
+  &.triangle {
+    background-image: url(./triangle.png);
+  }
+}
+
+.right {
+  text-align: right;
+}
+
+.split {
+  min-width: 25vw;
+  h2 {
+    position: absolute;
+    right: 3vw;
+    width: 1em;
+  }
+  h3 {
+    font-size: 4vw;
+    position: absolute;
+    left: 5vw;
+    width: 1em;
+  }
 }
